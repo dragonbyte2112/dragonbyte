@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green: #00ff6e;
+  --green2: #00cc55;
+  --blue: #00d4ff;
+  --red: #ff2040;
+  --bg: #020c06;
+  --card: #071a0e;
+  --border: #0f3020;
+  --text: #b0ffcc;
+  --muted: #3a7a50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--green2); border-radius: 3px; }
+
+/* ── Utility Classes ── */
+.font-cyber  { font-family: 'Orbitron', monospace; }
+.font-mono   { font-family: 'Share Tech Mono', monospace; }
+.font-body   { font-family: 'Rajdhani', sans-serif; }
+.text-green  { color: var(--green); }
+.text-blue   { color: var(--blue); }
+.text-red    { color: var(--red); }
+.text-muted  { color: var(--muted); }
+
+/* ── Glow Effects ── */
+.glow-green { text-shadow: 0 0 20px #00ff6e80; }
+.glow-blue  { text-shadow: 0 0 20px #00d4ff80; }
+.glow-red   { text-shadow: 0 0 20px #ff204080; }
+
+/* ── Card ── */
+.db-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.db-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--green2), var(--blue));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+.db-card:hover { border-color: var(--green2); transform: translateY(-4px); }
+.db-card:hover::before { transform: scaleX(1); }
+
+/* ── Buttons ── */
+.btn-primary {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #020c06;
+  background: var(--green);
+  padding: 12px 28px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: #39ff14;
+  box-shadow: 0 0 30px #00ff6e80;
+  transform: translateY(-2px);
+}
+
+.btn-outline-blue {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--blue);
+  background: transparent;
+  padding: 12px 28px;
+  border: 1.5px solid var(--blue);
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-outline-blue:hover {
+  background: #00d4ff15;
+  box-shadow: 0 0 20px #00d4ff40;
+  transform: translateY(-2px);
+}
+
+/* ── Form Inputs ── */
+.db-input {
+  width: 100%;
+  background: #030f08;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 10px 14px;
+  color: var(--text);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.82rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.db-input:focus { border-color: var(--green2); }
+.db-input::placeholder { color: var(--muted); }
+
+.db-select {
+  width: 100%;
+  background: #030f08;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 10px 14px;
+  color: var(--text);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.82rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.db-select:focus { border-color: var(--green2); }
+.db-select option { background: #030f08; }
+
+.db-textarea {
+  width: 100%;
+  background: #030f08;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 10px 14px;
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s;
+  line-height: 1.5;
+}
+.db-textarea:focus { border-color: var(--green2); }
+.db-textarea::placeholder { color: var(--muted); }
+
+/* ── Tags / Badges ── */
+.tag { font-family: 'Share Tech Mono', monospace; font-size: 0.6rem; padding: 3px 10px; border-radius: 2px; letter-spacing: 1px; }
+.tag-ctf        { background: #00ff6e15; color: var(--green);  border: 1px solid var(--green2); }
+.tag-workshop   { background: #00d4ff15; color: var(--blue);   border: 1px solid var(--blue); }
+.tag-talk       { background: #ff204015; color: var(--red);    border: 1px solid var(--red); }
+.tag-admin      { color: var(--red); }
+.tag-player     { color: var(--green); }
+.tag-beginner   { color: var(--blue); }
+.tag-skill      { background: #00ff6e10; color: var(--green2); border: 1px solid #00ff6e25; font-family: 'Share Tech Mono', monospace; font-size: 0.58rem; padding: 2px 8px; border-radius: 2px; letter-spacing: 1px; }
+
+/* ── Section Header ── */
+.section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+.section-line   { flex: 1; height: 1px; background: linear-gradient(90deg, var(--green2), transparent); }
+.section-title  { font-family: 'Orbitron', monospace; font-size: 1rem; color: var(--green); letter-spacing: 3px; white-space: nowrap; }
+
+/* ── Scan line animation ── */
+.scan-line {
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--green), transparent);
+  animation: scan 4s linear infinite;
+  opacity: 0.5;
+  pointer-events: none;
+}
+@keyframes scan { 0% { top: 0 } 100% { top: 100% } }
+
+/* ── Glitch effect ── */
+.glitch { animation: glitch 8s infinite; }
+@keyframes glitch {
+  0%,96%,100% { text-shadow: 0 0 20px #00ff6e60; }
+  97% { text-shadow: -2px 0 #ff2040, 2px 0 #00d4ff; }
+  98% { text-shadow: 2px 0 #ff2040, -2px 0 #00d4ff; }
+}
+
+/* ── Page fade in ── */
+.page-enter { animation: fadeUp 0.5s ease both; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+/* ── Matrix canvas ── */
+#matrix-canvas {
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0; opacity: 0.15;
+  pointer-events: none;
+}
