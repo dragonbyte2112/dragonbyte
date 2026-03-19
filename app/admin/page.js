@@ -16,8 +16,8 @@ import {
 import Footer from '../../components/Footer'
 
 // ── Change your admin credentials here ──
-const ADMIN_EMAIL    = 'dragonbyte2112@gmail.com'
-const ADMIN_PASSWORD = 'DragonByte@2025'
+const ADMIN_EMAIL    = 'cybermonk'
+const ADMIN_PASSWORD = 'mrx'
 
 // ── Constants ──
 const SKILLS   = ['WEB','CRYPTO','FORENSICS','REV','PWN','OSINT']
