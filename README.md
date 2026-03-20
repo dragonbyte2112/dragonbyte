@@ -180,9 +180,6 @@ Open your browser and go to: **http://localhost:3000** 🎉
 | Join          | http://localhost:3000/join       |
 | Admin         | http://localhost:3000/admin      |
 
-**Admin Login:**
-- Email: `admin@dragonbyte.com`
-- Password: `admin123`
 
 ---
 
@@ -250,11 +247,8 @@ await addDoc(collection(db, 'join_requests'), {
 
 ---
 
-## 📞 Admin Credentials (Change in Production!)
-
 ```
-Email:    admin@dragonbyte.com
-Password: admin123
+
 ```
 
 > ⚠️ Before going live, connect Firebase Auth and change these credentials!
