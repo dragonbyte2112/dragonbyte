@@ -1,6 +1,6 @@
-// app/layout.js
 import './globals.css'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import MatrixBg from '../components/MatrixBg'
 import { AuthProvider } from '../lib/AuthContext'
 import { Toaster } from 'react-hot-toast'
@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
           <main style={{ position:'relative', zIndex:1, marginTop:'64px' }}>
             {children}
           </main>
+          <Footer /> {/* Added Footer */}
           <Toaster
             position="bottom-right"
             toastOptions={{
