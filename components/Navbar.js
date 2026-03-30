@@ -1,6 +1,7 @@
 // components/Navbar.js
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { signOut } from 'firebase/auth'
 import { auth } from '../lib/firebase'
@@ -38,10 +39,14 @@ export default function Navbar() {
     }}>
       {/* Logo */}
       <Link href="/" style={{ display:'flex', alignItems:'center', gap:'10px', textDecoration:'none', flexShrink:0 }}>
-        <div style={{ width:36, height:36, borderRadius:'50%', background:'radial-gradient(circle,#0a3018,#020c06)', border:'1.5px solid #00cc55', display:'flex', alignItems:'center', justifyContent:'center', fontSize:18 }}>🐉</div>
-        <span style={{ fontFamily:'Orbitron,monospace', fontSize:'0.85rem', fontWeight:900, letterSpacing:'2px' }}>
-          <span style={{ color:'#00ff6e' }}>DRAGON</span><span style={{ color:'#00d4ff' }}>BYTE</span>
-        </span>
+        <Image
+          src="/dragon_byte_new.png"
+          alt="DragonByte"
+          width={48}
+          height={48}
+          style={{ borderRadius:'50%', objectFit:'cover' }}
+          priority
+        />
       </Link>
 
       {/* Nav links */}

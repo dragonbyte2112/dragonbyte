@@ -26,7 +26,7 @@ export default function Footer() {
         color: '#3a7a50',
         letterSpacing: '2px',
       }}>
-        // LEARN · HACK · DEFEND · GROW // 2025
+        // LEARN · HACK · DEFEND · GROW // 2025 @sanjai
       </div>
     </footer>
   )
