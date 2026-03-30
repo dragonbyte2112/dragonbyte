@@ -1,17 +1,13 @@
-// app/ctf/page.js — DragonByte CTF Player Dashboard
+// app/ctf/challenges/page.js — DragonByte CTF Player Dashboard
 'use client'
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from '../../lib/firebase'
-import {
-  listenChallenges, submitFlag, listenLeaderboard,
-  getUserSolves, getCTFSettings,
-} from '../../lib/ctf'
 import Link from 'next/link'
-import Footer from '../../../components/Footer'; // adjust based on folder depth
+import Footer from '../../../components/Footer';
 import { auth } from '../../../lib/firebase';
 import { listenChallenges, submitFlag, listenLeaderboard, getUserSolves, getCTFSettings } from '../../../lib/ctf';
+
 // ── Palette (matches your existing admin style) ──
 const DIFF_COLOR = { easy:'#00ff6e', medium:'#ffcc00', hard:'#ff2040', insane:'#aa66ff' }
 const CAT_ICONS  = { web:'🌐', crypto:'🔐', forensics:'🔍', pwn:'💥', rev:'⚙️', osint:'👁️', misc:'🚩' }
