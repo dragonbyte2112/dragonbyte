@@ -46,6 +46,4 @@ export default function RootLayout({ children }) {
 
 ---
 
-## Final Step — Copy image to public folder ✅
 ```
-public/dragon_byte_new.png   ← copy your logo here
