@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { listenChallenges } from '../../lib/ctf'
-import { useAuth } from '../../lib/Authcontext'
+import { useAuth } from '../../lib/AuthContext'
 import Footer from '../../components/Footer'
 
 const CAT_ICONS  = { web:'🌐', crypto:'🔐', forensics:'🔍', pwn:'💥', rev:'⚙️', osint:'👁️', misc:'🚩' }

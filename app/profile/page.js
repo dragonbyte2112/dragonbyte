@@ -2,7 +2,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { useAuth } from '../../lib/Authcontext'
+import { useAuth } from '../../lib/AuthContext'
 import { getUserSolves, getLeaderboard } from '../../lib/ctf'
 import { signOut } from 'firebase/auth'
 import { auth } from '../../lib/firebase'

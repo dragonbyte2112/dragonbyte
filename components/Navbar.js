@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { signOut } from 'firebase/auth'
 import { auth } from '../lib/firebase'
-import { useAuth } from '../lib/Authcontext'
+import { useAuth } from '../lib/AuthContext'
 import toast from 'react-hot-toast'
 
 const LINKS = [

@@ -2,7 +2,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { listenLeaderboard } from '../../../lib/ctf'
-import { useAuth } from '../../../lib/Authcontext'
+import { useAuth } from '../../../lib/AuthContext'
 import Footer from '../../../components/Footer'
 
 const MEDALS = ['🥇','🥈','🥉']

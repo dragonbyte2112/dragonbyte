@@ -2,7 +2,7 @@
 import './globals.css'
 import Navbar from '../components/Navbar'
 import MatrixBg from '../components/MatrixBg'
-import { AuthProvider } from '../lib/Authcontext'
+import { AuthProvider } from '../lib/AuthContext'
 import { Toaster } from 'react-hot-toast'
 
 export const metadata = {

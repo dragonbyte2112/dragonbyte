@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { listenChallenges, submitFlag, hasSolved, getUserSolves } from '../../../lib/ctf'
-import { useAuth } from '../../../lib/Authcontext'
+import { useAuth } from '../../../lib/AuthContext'
 import toast from 'react-hot-toast'
 import Link from 'next/link'
 import Footer from '../../../components/Footer'
