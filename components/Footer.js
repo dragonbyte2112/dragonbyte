@@ -1,5 +1,5 @@
 // components/Footer.js
-import Footer from '../../components/Footer'
+
 export default function Footer() {
   return (
     <footer style={{
