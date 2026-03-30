@@ -11,8 +11,7 @@ import {
 import Link from 'next/link'
 import Footer from '../../../components/Footer'; // adjust based on folder depth
 import { auth } from '../../../lib/firebase';
-import { listenChallenges, submitFlag } from '../../../lib/ctf';
-
+import { listenChallenges, submitFlag, listenLeaderboard, getUserSolves, getCTFSettings } from '../../../lib/ctf';
 // ── Palette (matches your existing admin style) ──
 const DIFF_COLOR = { easy:'#00ff6e', medium:'#ffcc00', hard:'#ff2040', insane:'#aa66ff' }
 const CAT_ICONS  = { web:'🌐', crypto:'🔐', forensics:'🔍', pwn:'💥', rev:'⚙️', osint:'👁️', misc:'🚩' }
